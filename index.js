@@ -20,13 +20,12 @@ const Order = require('./models/OrderModel')
 const stripe = Stripe('your-stripe-secret-key'); // Replace with your Secret Key
 
 app.use(express.json());
-// app.use(
-//     cors({
-//         origin: "*",
-//         credentials: true
-//     })
-// );
-app.use(cors());
+app.use(
+    cors({
+        origin: "https://e-commerce-frontend-c69d.vercel.app",
+        credentials:true
+    })
+);
 
 app.post('/signup', async (req, res) => {
     const { email, password } = req.body;
