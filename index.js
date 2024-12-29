@@ -22,7 +22,7 @@ const stripe = Stripe('your-stripe-secret-key'); // Replace with your Secret Key
 app.use(express.json());
 app.use(
     cors({
-        origin: "https://e-commerce-frontend-c69d.vercel.app",
+        origin: "*",
         credentials:true
     })
 );
